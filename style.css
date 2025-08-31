@@ -1,0 +1,102 @@
+nav a {
+    display: inline-block;
+    background: black;   /* green button */
+    padding: 0.8rem 1.2rem;
+    margin: 0 0.5rem;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+    border: none;
+    outline: none;
+}
+
+nav a:hover {
+    background: rgba(128, 128, 128, 0.518);   /* darker green on hover */
+    color: white;
+}
+nav {
+    position: fixed;
+    top: 0; /* stick to very top of the page */
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    padding: 10px 0;
+    z-index: 2000;  /* higher than header */
+}
+
+header {
+    background: rgba(0,0,0,0);
+    color: white;
+    font-size:6rem; /* increased font size */
+    font-weight: bold; /* optional: make it bolder */
+    padding: 3rem;
+    width: 60%;
+    max-width: 800px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 120px;
+    box-shadow: 0 0 0px rgba(0,0,0,0);
+}
+
+.logo {
+    position: fixed;
+    top: 0.8rem;
+    left: 0.8rem;
+    z-index: 20; /* above everything */
+}
+
+.logo img {
+    height: 40px;   /* increased from 40px */
+    width: auto;    /* keeps aspect ratio */
+    cursor: pointer;
+}
+.subtext {
+    color: white;          /* visible text */
+    font-size: 1.5rem;     /* adjust size */
+    text-align: center;    /* center under header */
+    background: transparent; /* no background */
+    margin-top: -2rem;     /* move closer to header */
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+.news-ticker {
+  position: fixed;
+  text-align: center;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0);  /* semi-transparent so text is readable */
+  color: white;
+  padding: 10px;
+  font-size: 1rem;
+  line-height: 1.5;             /* better readability */
+  white-space: normal !important; /* force line breaks */
+  word-wrap: break-word;        /* break long words if needed */
+  overflow: hidden;             /* no scrollbars */
+  box-sizing: border-box;
+}
+
+
+/* Clock styling - fixed bottom-left */
+#clock {
+  position: fixed;
+  top: 8px;
+  right: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #fff;
+  background: rgba(0,0,0,0.1);
+  padding: 6px 12px;
+  border-radius: 6px;
+  z-index: 100; /* stays above other elements */
+}
